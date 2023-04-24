@@ -1,25 +1,30 @@
 const getNthElement = (index, array) => {
-  // your code here
+  let myIndex = index % array.length;
+  return array[myIndex];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  let text = array.join();
+  return text;
 };
 
 const csvStringToArray = string => {
-  // your code here
+  let text = string.split(',');
+  return text;
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
+//  return array; - I got stuck here, discussed with Jasmin 24/04 and the test is expecting undefined :)
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  let newArray = [...array, element]; // ... = spread operator
+  return newArray;
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
