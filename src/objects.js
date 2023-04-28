@@ -1,5 +1,6 @@
 const createPerson = (name, age) => {
-  // your code here
+  const person = {name:name, age:age};
+  return person;
 };
 
 const getName = object => {

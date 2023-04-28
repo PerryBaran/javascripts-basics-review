@@ -94,7 +94,12 @@ const sumNumbers = numbers => {
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  return strings.sort((a, b) => {
+    const lastCharA = a.charCodeAt(a.length - 1);
+    const lastCharB = b.charCodeAt(b.length - 1);
+    return lastCharA - lastCharB;
+    //The charCodeAt() method returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index.
+  });
 }
 
 module.exports = {
