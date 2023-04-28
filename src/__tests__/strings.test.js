@@ -14,7 +14,7 @@ describe('sayHello', () => {
 
   xit('returns "Hello MCR Codes!" when passed "MCR Codes"', () => {
     expect(sayHello('MCR Codes')).toEqual('Hello, MCR Codes!');
-  });
+  x});
 
   xit('returns "Hello fsghjdfkhgf!" when passed "fsghjdfkhgf"', () => {
     expect(sayHello('fsghjdfkhgf')).toEqual('Hello, fsghjdfkhgf!');

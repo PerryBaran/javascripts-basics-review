@@ -13,7 +13,7 @@ const {
 } = require('../numbers');
 
 describe('add', () => {
-  xit('adds the two numbers together', () => {
+  it('adds the two numbers together', () => {
     expect(add(2, 1)).toEqual(3);
     expect(add(15, 76)).toEqual(91);
     expect(add(12, 0)).toEqual(12);
@@ -22,7 +22,7 @@ describe('add', () => {
 });
 
 describe('subtract', () => {
-  xit('subtracts the second number from the first', () => {
+  it('subtracts the second number from the first', () => {
     expect(subtract(2, 1)).toEqual(1);
     expect(subtract(1, 2)).toEqual(-1);
     expect(subtract(-2, 1)).toEqual(-3);
@@ -32,7 +32,7 @@ describe('subtract', () => {
 });
 
 describe('multiply', () => {
-  xit('multiplies the two numbers together', () => {
+  it('multiplies the two numbers together', () => {
     expect(multiply(10, 3)).toEqual(30);
     expect(multiply(-11, 5)).toEqual(-55);
     expect(multiply(-4, -9)).toEqual(36);
@@ -40,7 +40,7 @@ describe('multiply', () => {
 });
 
 describe('divide', () => {
-  xit('divides the first number by the second number', () => {
+  it('divides the first number by the second number', () => {
     expect(divide(20, 5)).toEqual(4);
     expect(divide(5, 2)).toEqual(2.5);
     expect(divide(2, 5)).toEqual(0.4);
