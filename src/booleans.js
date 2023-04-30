@@ -7,23 +7,43 @@ function negate(a) {
 }
 
 function both(a, b) {
-  // your code here
+  if (a && b) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function either(a, b) {
-  // your code here
+  if (a || b) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function none(a, b) {
-  // your code here
+  if (a || b == true) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 function one(a, b) {
-  // your code here
+  if ((a && !b) || (!a && b)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function truthiness(a) {
-  // your code here
+  if (a) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function isEqual(a, b) {
