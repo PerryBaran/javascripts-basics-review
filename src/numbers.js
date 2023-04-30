@@ -35,11 +35,11 @@ function absolute (a) {
 }
 
 function quotient (a, b) {
-	return Math.floor(a / b);
+	return Math.trunc(a / b);
 }
 
 function remainder (a, b) {
-  return (a % b);
+ return (a % b);
 }
 
 module.exports = {
