@@ -51,15 +51,24 @@ function isSquare(a) {
 }
 
 function startsWith(char, string) {
-  // your code here
+  return string.charAt(0) == char;
 }
 
 function containsVowels(string) {
-  // your code here
+  const v = string.match(/[aeiou]/gi);
+  if (v.length > 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function isLowerCase(string) {
-  // your code here
+  if (string.toLowerCase() !== string) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 module.exports = {
