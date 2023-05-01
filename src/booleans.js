@@ -63,9 +63,11 @@ function containsVowels(string) {
     if (vowels.includes(char)) {
       vowelCount++;
     }
-    if (vowelCount == 0) {
-      return false;
-    }
+  }
+  if (vowelCount == 0) {
+    return false;
+  } else {
+    return true;
   }
 }
 
