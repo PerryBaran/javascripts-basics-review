@@ -1,61 +1,81 @@
 const getNthElement = (index, array) => {
-  // your code here
+  const newIndex = index % array.length;
+  //  findIndex()- takes a callback function that is called with each element in the array and its index. In this case, we use the callback function to find the index that matches our calculated index
+  const elementIndex = array.findIndex((_, i) => i === newIndex);
+  return array[elementIndex];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.join();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  // splice mutates the original array(second parameter is n of items to remove)
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  // map numbers array using String object
+  return numbers.map(String);
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(s => s.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(s =>s.split('').reverse().join(''));
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(number => number % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.filter(item => item !== array[index]);
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(string => {
+    return string[0].toLowerCase() === 'a' || string[0].toLowerCase() === 'e' || string[0].toLowerCase() === 'i' || string[0].toLowerCase() === 'o' || string[0].toLowerCase() === 'u';
+  });
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  return numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  });
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  // sort() method is called on the strings array, and a comparison function is passed as an argument to determine the sorting order
+  const newArr = strings.sort((a, b) => {
+    // This  comparison function takes two arguments, a and b, which represent two
+    // elements being compared. Inside the function, it compares the last letter of each
+    // string using the charAt() method and the length property of the strings
+    if (a.charAt(a.length - 1) > b.charAt(b.length - 1)) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+  return newArr;
 };
 
 module.exports = {
