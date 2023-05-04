@@ -1,30 +1,23 @@
-const getNthElement = (index, array) => {
-  index = index % array.length;
-  return array[index];
-};
+const getNthElement = (index, array) => array[index % array.length];
 
-const arrayToCSVString = array => {
-  // your code here
-};
+const arrayToCSVString = array => array.toString();
 
-const csvStringToArray = string => {
-  // your code here
-};
+const csvStringToArray = string => string.split(',');
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.map(element => element.toString());
 };
 
 const uppercaseWordsInArray = strings => {
