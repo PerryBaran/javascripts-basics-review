@@ -1,13 +1,7 @@
 const getNthElement = (index, array) => {
-  if (index > array.length) {
-    index = 0;
-    console.log(index);
-  } else {
-    return array[index];
-  }
+  index = index % array.length;
+  return array[index];
 };
-// array = ["cat", "dog", "elephant", "fox"];
-// getNthElement(3, array);
 
 const arrayToCSVString = array => {
   // your code here
