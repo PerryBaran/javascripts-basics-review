@@ -8,13 +8,9 @@ const addToArray = (element, array) => {
   array.push(element);
 };
 
-const addToArray2 = (element, array) => {
-  return array.concat(element);
-};
+const addToArray2 = (element, array) => array.concat(element);
 
-const removeNthElement = (index, array) => {
-  array.splice(index, 1);
-};
+const removeNthElement = (index, array) => array.splice(index, 1);
 
 const numbersToStrings = numbers => {
   return numbers.map(element => element.toString());
