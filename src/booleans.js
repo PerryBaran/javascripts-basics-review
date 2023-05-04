@@ -1,62 +1,79 @@
 function negate(a) {
-  // your code here
-};
+  return !a;
+}
 
 function both(a, b) {
-  // your code here
-};
+  return a && b;
+}
 
 function either(a, b) {
-  // your code here
-};
+  return a || b;
+}
 
 function none(a, b) {
-  // your code here
-};
+  return !a && !b;
+}
 
 function one(a, b) {
-  // your code here
-};
+  return a !== b;
+}
 
 function truthiness(a) {
-  // your code here
-};
+  return a ? true : false;
+}
 
 function isEqual(a, b) {
-  // your code here
-};
+  return a === b;
+}
 
 function isGreaterThan(a, b) {
-  // your code here
-};
+  return a > b;
+}
 
 function isLessThanOrEqualTo(a, b) {
-  // your code here
-};
+  return a <= b;
+}
 
 function isOdd(a) {
-  // your code here
-};
+  const oddNum = a % 2;
+  if(oddNum !== 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function isEven(a) {
-  // your code here
-};
+  const eveNum = a % 2;
+  if(eveNum === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function isSquare(a) {
-  // your code here
-};
+  if(Math.sqrt(a) % 1 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function startsWith(char, string) {
-  // your code here
-};
+  return string.charAt(0) === char;
+}
 
+// eslint-disable-next-line consistent-return
 function containsVowels(string) {
-  // your code here
-};
+  // regular expression to test whether the string contains any vowels (a, e, i, o, or u). The /i modifier makes the search case-insensitive, so it will match both lowercase and uppercase vowels
+  return /[aeiou]/i.test(string);
+}
 
 function isLowerCase(string) {
-  // your code here
-};
+  // this will return true;
+  return string === string.toLowerCase();
+}
 
 module.exports = {
   negate,
