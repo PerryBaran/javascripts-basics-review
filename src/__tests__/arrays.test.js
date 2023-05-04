@@ -19,13 +19,13 @@ const {
 describe('getNthElement', () => {
   const array = ['cat', 'dog', 'elephant', 'fox'];
 
-  xit('returns the element at the given position', () => {
+  it('returns the element at the given position', () => {
     expect(getNthElement(0, array)).toEqual('cat');
     expect(getNthElement(2, array)).toEqual('elephant');
     expect(getNthElement(3, array)).toEqual('fox');
   });
 
-  xit('if n is greater than the number of elements, it cycles back to the start', () => {
+  it('if n is greater than the number of elements, it cycles back to the start', () => {
     expect(getNthElement(4, array)).toEqual('cat');
     expect(getNthElement(5, array)).toEqual('dog');
   });
@@ -76,7 +76,7 @@ describe('removeNthElement', () => {
     const array = ['ant', 'bison', 'cockerel', 'duck', 'elephant'];
     removeNthElement(2, array);
     expect(array).toEqual(['ant', 'bison', 'duck', 'elephant']);
-    
+
     const arrayTwo = ['thing 1', 'thing 2', 'thing 3', 'thing 4', 'thing 5'];
     removeNthElement(0, arrayTwo);
     expect(arrayTwo).toEqual(['thing 2', 'thing 3', 'thing 4', 'thing 5']);
@@ -170,13 +170,10 @@ describe('elementsStartingWithAVowel', () => {
         'zupple'
       ])
     ).toEqual(['apple', 'epple', 'ipple', 'opple', 'upple']);
-    expect(
-      elementsStartingWithAVowel([
-        'aaaa',
-        'bbbb',
-        'eeee',
-      ])
-    ).toEqual(['aaaa', 'eeee']);
+    expect(elementsStartingWithAVowel(['aaaa', 'bbbb', 'eeee'])).toEqual([
+      'aaaa',
+      'eeee'
+    ]);
   });
 
   xit('is case insensitive', () => {
@@ -210,13 +207,10 @@ describe('elementsStartingWithAVowel', () => {
         'Zupple'
       ])
     ).toEqual(['Apple', 'Epple', 'Ipple', 'Opple', 'Upple']);
-     expect(
-      elementsStartingWithAVowel([
-        'Aaaa',
-        'Bbbb',
-        'Eeee',
-      ])
-    ).toEqual(['Aaaa', 'Eeee']);
+    expect(elementsStartingWithAVowel(['Aaaa', 'Bbbb', 'Eeee'])).toEqual([
+      'Aaaa',
+      'Eeee'
+    ]);
   });
 });
 
@@ -243,8 +237,11 @@ describe('sortByLastLetter', () => {
     expect(
       sortByLastLetter(['Lannister', 'Stark', 'Greyjoy', 'Targaryen'])
     ).toEqual(['Stark', 'Targaryen', 'Lannister', 'Greyjoy']);
-    expect(
-      sortByLastLetter(['Mo', 'Romy', 'Miguel', 'Martyna'])
-    ).toEqual(['Martyna', 'Miguel', 'Mo', 'Romy']);
+    expect(sortByLastLetter(['Mo', 'Romy', 'Miguel', 'Martyna'])).toEqual([
+      'Martyna',
+      'Miguel',
+      'Mo',
+      'Romy'
+    ]);
   });
 });

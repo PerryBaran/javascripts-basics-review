@@ -1,6 +1,13 @@
 const getNthElement = (index, array) => {
-  // your code here
+  if (index > array.length) {
+    index = 0;
+    console.log(index);
+  } else {
+    return array[index];
+  }
 };
+// array = ["cat", "dog", "elephant", "fox"];
+// getNthElement(3, array);
 
 const arrayToCSVString = array => {
   // your code here
@@ -35,7 +42,15 @@ const reverseWordsInArray = strings => {
 };
 
 const onlyEven = numbers => {
-  // your code here
+  Array.map();
+
+  function isOdd(a) {
+    return Math.abs(a % 2) == 1;
+  }
+
+  function isEven(a) {
+    return a % 2 == 0;
+  }
 };
 
 const removeNthElement2 = (index, array) => {
