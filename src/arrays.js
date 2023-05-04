@@ -17,23 +17,20 @@ const numbersToStrings = numbers => {
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(letter => letter.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(word =>
+    word
+      .split('')
+      .reverse()
+      .join('')
+  );
 };
 
 const onlyEven = numbers => {
-  Array.map();
-
-  function isOdd(a) {
-    return Math.abs(a % 2) == 1;
-  }
-
-  function isEven(a) {
-    return a % 2 == 0;
-  }
+  return numbers.filter(number => number % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {

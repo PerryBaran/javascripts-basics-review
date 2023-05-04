@@ -91,7 +91,7 @@ describe('numbersToStrings', () => {
 });
 
 describe('uppercaseWordsInArray', () => {
-  xit('makes every string in the array uppercase', () => {
+  it('makes every string in the array uppercase', () => {
     expect(uppercaseWordsInArray(['cat', 'mouse', 'banana'])).toEqual([
       'CAT',
       'MOUSE',
@@ -106,7 +106,7 @@ describe('uppercaseWordsInArray', () => {
 });
 
 describe('reverseWordsInArray', () => {
-  xit('reverses every string in an array', () => {
+  it('reverses every string in an array', () => {
     expect(reverseWordsInArray(['cat', 'Mouse', 'banana'])).toEqual([
       'tac',
       'esuoM',
@@ -121,7 +121,7 @@ describe('reverseWordsInArray', () => {
 });
 
 describe('onlyEven', () => {
-  xit('filters the array and only returns even numbers', () => {
+  it('filters the array and only returns even numbers', () => {
     expect(onlyEven([1, 2, 3, 4, 5, 6, 7, 8])).toEqual([2, 4, 6, 8]);
     expect(onlyEven([8, 9, 10, 11, 12, 13, 14, 15])).toEqual([8, 10, 12, 14]);
   });
