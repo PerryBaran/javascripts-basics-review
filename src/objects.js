@@ -22,12 +22,10 @@ const isOver65 = person => {
 };
 
 const getAges = people => {
-  return people.map(person => person.age);
+  return people.map(personObj => personObj.age);
 };
 
-const findByName = (name, people) => {
-  // your code here
-};
+const findByName = (name, people) => {};
 
 const findHondas = cars => {
   // your code here
