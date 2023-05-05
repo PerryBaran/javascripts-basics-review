@@ -51,16 +51,19 @@ const elementsStartingWithAVowel = strings => {
   );
 };
 
-const removeSpaces = string => {
-  // your code here
-};
+const removeSpaces = string => string.split(' ').join('');
 
 const sumNumbers = numbers => {
-  // your code here
+  const result = numbers.reduce((a, b) => {
+    return a + b;
+  }, 0);
+  return result;
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  return strings.sort(
+    (a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1)
+  );
 };
 
 module.exports = {
