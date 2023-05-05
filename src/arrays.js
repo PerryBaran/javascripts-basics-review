@@ -40,11 +40,15 @@ const removeNthElement2 = (index, array) => {
   return newArray;
 };
 
-// would have liked to use:
-// const removeNthElement2 = (index, array) => array.toSpliced(index, 1);
-
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(
+    string =>
+      string.toLowerCase().startsWith('a') ||
+      string.toLowerCase().startsWith('e') ||
+      string.toLowerCase().startsWith('i') ||
+      string.toLowerCase().startsWith('o') ||
+      string.toLowerCase().startsWith('u')
+  );
 };
 
 const removeSpaces = string => {
