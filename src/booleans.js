@@ -1,4 +1,4 @@
-function negate(a) {
+git function negate(a) {
   return !a;
 }
 
