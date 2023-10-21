@@ -1,44 +1,44 @@
-function add (a, b) {
+const add = (a, b) => {
+  return a + b;
+};
+
+const subtract = (a, b) => {
+  return a - b;
+};
+
+const multiply = (a, b) => {
+  return a * b;
+};
+
+function divide(a, b) {
   // your code here
 }
 
-function subtract (a, b) {
+function power(a, b) {
   // your code here
 }
 
-function multiply (a, b) {
+function round(a) {
   // your code here
 }
 
-function divide (a, b) {
+function roundUp(a) {
   // your code here
 }
 
-function power (a, b) {
+function roundDown(a) {
   // your code here
 }
 
-function round (a) {
+function absolute(a) {
   // your code here
 }
 
-function roundUp (a) {
+function quotient(a, b) {
   // your code here
 }
 
-function roundDown (a) {
-  // your code here
-}
-
-function absolute (a) {
-  // your code here
-}
-
-function quotient (a, b) {
-  // your code here
-}
-
-function remainder (a, b) {
+function remainder(a, b) {
   // your code here
 }
 
@@ -54,4 +54,4 @@ module.exports = {
   absolute,
   quotient,
   remainder
-}
+};
