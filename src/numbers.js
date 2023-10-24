@@ -18,8 +18,8 @@ const power = (a, b) => {
   return a ** b;
 }
 
-function round (a) {
-  // your code here
+const round = (a) => {
+return Math.round (a); 
 }
 
 function roundUp (a) {
