@@ -14,9 +14,9 @@ const divide = (a, b) => {
   return a / b;
 };
 
-function power (a, b) {
-  // your code here
-}
+const power = (a, b) => {
+  return a ** b;
+};
 
 function round (a) {
   // your code here
@@ -38,9 +38,9 @@ function quotient (a, b) {
   // your code here
 }
 
-function remainder (a, b) {
-  // your code here
-}
+const remainder = (a, b) => {
+  return a % b;
+};
 
 module.exports = {
   add,

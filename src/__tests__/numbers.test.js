@@ -49,7 +49,7 @@ describe('divide', () => {
 });
 
 describe('power', () => {
-  xit('returns the first number to the power of the second', () => {
+  it('returns the first number to the power of the second', () => {
     expect(power(5, 2)).toEqual(25);
     expect(power(2, 3)).toEqual(8);
     expect(power(10, 5)).toEqual(100000);
@@ -102,7 +102,7 @@ describe('quotient', () => {
 });
 
 describe('remainder', () => {
-  xit('returns the remainder when dividing the first number by the second number', () => {
+  it('returns the remainder when dividing the first number by the second number', () => {
     expect(remainder(10, 3)).toEqual(1);
     expect(remainder(18, 7)).toEqual(4);
     expect(remainder(77, 10)).toEqual(7);
