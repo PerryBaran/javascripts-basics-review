@@ -14,8 +14,8 @@ const divide = (a, b) => {
   return a / b;
 }
 
-function power (a, b) {
-  // your code here
+const power = (a, b) => {
+  return a ** b;
 }
 
 function round (a) {
