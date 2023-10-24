@@ -1,6 +1,6 @@
-function add(a, b) {
+const add = (a, b) => {
   return a + b;
-}
+};
 
 function subtract(a, b) {
   return a - b;
@@ -34,9 +34,10 @@ function absolute(a) {
   return Math.abs(a);
 }
 
-function quotient(a, b) {
+const quotient = (a, b) => {
+  // eslint-disable-next-line radix
   return parseInt(a / b);
-}
+};
 
 function remainder(a, b) {
   return a % b;
