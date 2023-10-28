@@ -30,12 +30,12 @@ const roundDown = (a, b, c) => {
   return Math.floor(a, b, c);
 }
 
-function absolute (a) {
-  // your code here
+const absolute = (a, b, c) => {
+  return Math.abs(a, b, c);
 }
 
-function quotient (a, b) {
-  // your code here
+const quotient = (a, b) => {
+  return Math.trunc(a / b);
 }
 
 const remainder = (a, b) => {

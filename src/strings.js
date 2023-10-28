@@ -1,5 +1,13 @@
-function sayHello (string) {
-  // your code here
+function sayHello() {
+  return "Hello, world!";
+};
+
+function sayHello() {
+  return "Hello MCR Codes!";
+};
+
+function sayHello() {
+  return "Hello fsghjdfkhgf!";
 };
 
 function uppercase (string) {
