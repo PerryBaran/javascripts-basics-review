@@ -27,7 +27,7 @@ const none = (a, b) => {
 };
 
 function one (a, b) {
-  if ((a && b) && (!a && !b)) {
+  if ((a && b) || (!a && !b)) {
     return false;
   } else {
     return true;
@@ -35,12 +35,7 @@ function one (a, b) {
 };
 
 function truthiness (a) {
-const falsy = [false, undefined, 0, null, undefined, NaN];
-  if (a = falsy) {
-    return false; 
-  } else {
-    return true;
-  }
+return Boolean(a);
 };
 
 const isEqual = (a, b) => {
@@ -86,7 +81,7 @@ function isEven(a) {
 
 const isSquare = (a) => {
 const num = Math.sqrt(a);
-return a.isInteger(a);
+return Number.isInteger(num);
 };
 
 function startsWith(char, string) {
