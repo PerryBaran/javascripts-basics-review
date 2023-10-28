@@ -1,5 +1,5 @@
 function sayHello(string) {
-  return 'hello, ${string}!';
+  return `Hello, ${string}!`;
 }
 
 function uppercase(string) {
@@ -10,16 +10,16 @@ function lowercase(string) {
   return string.toLowerCase();
 }
 
-function countCharacters (string) {
+function countCharacters(string) {
   return string.length;
 }
 
-function firstCharacter (string) {
-  // your code here
+function firstCharacter(string) {
+  return string.charAt(0);
 }
 
-function firstCharacters (string, n) {
-  // your code here
+function firstCharacters(string, n) {
+  return string.slice(0, n);
 }
 
 module.exports = {
