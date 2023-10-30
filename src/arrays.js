@@ -1,61 +1,80 @@
 const getNthElement = (index, array) => {
-  // your code here
+  const adjustIndex = index % array.length;
+  return array[adjustIndex];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.join(',');
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  const newArray = array.concat(element);
+  return newArray;
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  const newString = numbers.map(numbers => numbers.toString());
+  return newString;
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(word => word.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(word =>
+    word
+      .split('')
+      .reverse()
+      .join('')
+  );
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(number => number % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.filter((_, i) => i !== index);
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(word =>
+    ['a', 'e', 'i', 'o', 'u'].includes(word[0].toLowerCase())
+  );
 };
 
 const removeSpaces = string => {
-  // your code here
+  const newStringArray = string.split(' ');
+  return newStringArray.join('');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  return strings.sort((a, b) => {
+    const lastLetterA = a.charAt(a.length - 1).toLowerCase();
+    const lastLetterB = b.charAt(b.length - 1).toLowerCase();
+    return lastLetterA.localeCompare(lastLetterB);
+  });
 };
 
 module.exports = {
