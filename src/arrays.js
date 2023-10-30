@@ -1,61 +1,167 @@
 const getNthElement = (index, array) => {
-  // your code here
+  while (index >= array.length) {
+    index -= array.length;
+  }
+  return array[index];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  // let newString = `${array[0]},`;
+  // for (let i = 1; i < array.length; i++) {
+  //   i !== array.length - 1
+  //     ? (newString += `${array[i]},`)
+  //     : (newString += `${array[i]}`);
+  // }
+  // return newString;
+  ///////////////////////////////////////////
+  // let newString = '';
+  // for (let i = 0; i < array.length; i++) {
+  //   i !== array.length - 1
+  //     ? (newString += `${array[i]},`)
+  //     : (newString += `${array[i]}`);
+  // }
+  // return newString;
+  return array.toString();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  // const array = [string[0]];
+  // for (let i = 1; i < string.length; i++) {
+  //   if (i % 2 === 0) array.push(string[i]);
+  // }
+  // return array;
+
+  /////////////////////////////////////////////
+  // const array = [];
+  // for (let i = 0; i < string.length; i++) {
+  //   if (i % 2 === 0) array.push(string[i]);
+  // }
+  // return array;
+
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  // const newArray = [];
+  // for (let i = 0; i < array.length; i++) {
+  //   newArray.push(array[i]);
+  // }
+  // newArray.push(element);
+  // return newArray;
+
+  ////////////////////////////////////////
+  // const newArray = [];
+  // array.forEach(item => newArray.push(item));
+  // newArray.push(element);
+  // return newArray;
+
+  const newArray = array.map(item => item);
+  newArray.push(element);
+  return newArray;
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  // for (let i = 0; i < array.length; i++) {
+  //   if (i === index) array.splice(i, 1);
+  // }
+
+  array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  // const newArray = [];
+  // numbers.forEach(num => {
+  //   newArray.push(String(num));
+  // });
+  // return newArray;
+
+  return numbers.map(num => String(num));
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  // const newArray = [];
+  // strings.forEach(string => {
+  //   newArray.push(string.toUpperCase());
+  // });
+  // return newArray;
+
+  return strings.map(string => string.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  const newArray = [];
+  for (let i = 0; i < strings.length; i++) {
+    let newString = '';
+    for (let j = strings[i].length - 1; j >= 0; j--) {
+      newString += strings[i][j];
+    }
+    newArray.push(newString);
+  }
+  return newArray;
 };
 
 const onlyEven = numbers => {
-  // your code here
+  // const newArray = [];
+  // numbers.forEach(num => {
+  //   if (num % 2 === 0) newArray.push(num);
+  // });
+  // return newArray;
+
+  return numbers.filter(num => num % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  // const newArray = [];
+  // for (let i = 0; i < array.length; i++) {
+  //   if (i !== index) newArray.push(array[i]);
+  // }
+  // return newArray;
+
+  return array.filter((item, i) => i !== index);
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  return strings.filter(item => vowels.includes(item[0].toLowerCase()));
+  // try with regex ?
 };
 
 const removeSpaces = string => {
-  // your code here
+  //return string.replace(/ /gi, '');
+  return string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  // reduce((accumulator, currentValue)=>{});
+  return numbers.reduce((total, num) => {
+    return total + num;
+  }, 0);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  const newArray = [];
+  while (strings.length > 0) {
+    const index = findSmallestIndex(strings);
+    newArray.push(strings[index]);
+    strings.splice(index, 1);
+  }
+  return newArray;
+};
+// given an array of strings, return the index of the item with the smallest last letter (charcode)
+const findSmallestIndex = arr => {
+  let smallestIndex = 0;
+  let smallestCharCode = arr[0].charCodeAt(arr[0].length - 1);
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i].charCodeAt(arr[i].length - 1) < smallestCharCode) {
+      smallestIndex = i;
+      smallestCharCode = arr[i].charCodeAt(arr[i].length - 1);
+    }
+  }
+  return smallestIndex;
 };
 
 module.exports = {
