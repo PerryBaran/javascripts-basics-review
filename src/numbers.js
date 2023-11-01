@@ -1,46 +1,46 @@
-function add (a, b) {
-  // your code here
+const add = (a, b) => {
+  return a + b;
+};
+
+const subtract = (b, a) => {
+  return b - a;
+};
+
+const multiply = (a, b) => {
+  return a * b;
+};
+
+const divide = (a, b) => {
+  return a / b;
+};
+
+const power = (a, b) => {
+  return a ** b;
+};
+
+const round = (a, b, c) => {
+  return Math.round(a, b, c);
 }
 
-function subtract (a, b) {
-  // your code here
+const roundUp = (a, b, c) => {
+  return Math.ceil(a, b, c);
 }
 
-function multiply (a, b) {
-  // your code here
+const roundDown = (a, b, c) => {
+  return Math.floor(a, b, c);
 }
 
-function divide (a, b) {
-  // your code here
+const absolute = (a, b, c) => {
+  return Math.abs(a, b, c);
 }
 
-function power (a, b) {
-  // your code here
+const quotient = (a, b) => {
+  return Math.trunc(a / b);
 }
 
-function round (a) {
-  // your code here
-}
-
-function roundUp (a) {
-  // your code here
-}
-
-function roundDown (a) {
-  // your code here
-}
-
-function absolute (a) {
-  // your code here
-}
-
-function quotient (a, b) {
-  // your code here
-}
-
-function remainder (a, b) {
-  // your code here
-}
+const remainder = (a, b) => {
+  return a % b;
+};
 
 module.exports = {
   add,
